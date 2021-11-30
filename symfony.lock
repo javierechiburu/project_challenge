@@ -97,8 +97,14 @@
     "myclabs/deep-copy": {
         "version": "1.10.2"
     },
+    "n98/junit-xml": {
+        "version": "1.1.0"
+    },
     "nikic/php-parser": {
         "version": "v4.13.1"
+    },
+    "overtrue/phplint": {
+        "version": "3.0.0"
     },
     "phar-io/manifest": {
         "version": "2.0.3"
@@ -117,6 +123,9 @@
     },
     "phpspec/prophecy": {
         "version": "1.14.0"
+    },
+    "phpstan/phpstan": {
+        "version": "1.2.0"
     },
     "phpunit/php-code-coverage": {
         "version": "9.2.9"
