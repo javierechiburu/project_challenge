@@ -7,5 +7,5 @@
 	-phplint: composer require overtrue/phplint:^3.0 --dev -vvv
 	-phpstan: composer require --dev phpstan/phpstan
 
-3.- Crear controlador 
-4.- Crear en carpera test archivo "ChallengeTest.php" para pruebas
+3.- Crear controlador .
+4.- Crear en carpeta test archivo "ChallengeTest.php" para pruebas.
