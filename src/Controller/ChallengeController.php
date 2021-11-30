@@ -29,6 +29,18 @@ class ChallengeController extends AbstractController
     }
 
 
+    /**
+     * @Route("/", name="inicio")
+     */
+    public function displayResultHttp(): Response
+    {
+        return $this->render('index/index.html.twig', [
+            'controller_name' => 'ChallengeController',
+            'resultados' => $this->operation(100)
+        ]);
+    }
+
+
     public function operation(int $limit = 100): array
     {
         $arr_mult = range(1, $limit);
