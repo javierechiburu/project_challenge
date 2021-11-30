@@ -43,19 +43,19 @@ class ChallengeController extends AbstractController
 
     public function operation(int $limit = 100): array
     {
-        $arr_mult = range(1, $limit);
-        for ($i=3; $i <= $limit; $i=$i+3) {
-            $arr_mult[$i-1] = 'Falabella';
+        $arr_mult = range(1, $limit); // array de rango 1 a 100
+        for ($i=3; $i <= $limit; $i=$i+3) { // for que aumenta de 3 para obtener múltiplos
+            $arr_mult[$i-1] = 'Falabella'; // se reemplaza los índices del array de múltiplos de 3 por "Falabella"
         }
-        for ($i=5; $i <= $limit; $i=$i+5) {
-            $arr_mult[$i-1] = 'IT';
-            if($i%15==0){
-                $arr_mult[$i-1] = 'Integración';
+        for ($i=5; $i <= $limit; $i=$i+5) { // for que aumenta de 5 para obtener múltiplos
+            $arr_mult[$i-1] = 'IT'; // se reemplaza los índices del array de múltiplos de 3 por "Falabella"
+            if($i%15==0){ // se valida los números que son múltiplos de 3 y 5
+                $arr_mult[$i-1] = 'Integración'; // se reemplaza los índices del array de múltiplos de 15 por "Integración"
             }
         }
 
-        ksort($arr_mult);
-        $arr_mult = array_values($arr_mult);
+        ksort($arr_mult); // se ordena array
+        //$arr_mult = array_values($arr_mult); // se formatean los indices para que inicien desde 0
 
         return $arr_mult;
     }
