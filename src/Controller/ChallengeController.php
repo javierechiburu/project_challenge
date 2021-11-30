@@ -18,7 +18,7 @@ class ChallengeController extends AbstractController
         $this->logger = $logger;
     }
     /**
-     * @Route("/", name="inicio")
+     * @Route("/", name="displayHttp")
      */
     public function displayHttp(): Response
     {
@@ -30,7 +30,7 @@ class ChallengeController extends AbstractController
 
 
     /**
-     * @Route("/", name="inicio")
+     * @Route("/result", name="displayResultHttp")
      */
     public function displayResultHttp(): Response
     {
