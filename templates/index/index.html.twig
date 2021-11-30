@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Challenge{% endblock %}
+
+{% block body %}
+    <style>
+        .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+        .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+    </style>
+
+    <div class="example-wrapper">
+        <h1 class="text-info">F a l a b e l l a ✅</h1>
+
+        <p class="text-info"># Challenge – Backend Developer</p>
+        <p>Write a program that prints all the numbers from 1 to 100. However, for
+            multiples of 3, instead of the number, print "Falabella". For multiples of 5 print
+            "IT". For numbers which are multiples of both 3 and 5, print "Integraciones".</p>
+        <p>But here's the catch: you can use only one `if`. No multiple branches, ternary
+            operators or `else`.</p>
+        <p># Requirements<br>
+            * 1 if<br>
+            * You can't use `else`, `else if` or ternary<br>
+            * Unit tests<br>
+            * Feel free to apply your SOLID knowledge<br>
+            * You can write the challenge in any language you want. Here at Falabella we are<br>
+            big fans of PHP, Kotlin and TypeScript<br>
+            * One git branch for the solution<br>
+            * One git branch for the documentation</p>
+        <p># Submission<br>
+            Create a repository on GitLab, GitHub or any other similar service and just send us the link.</p>
+
+        <div class="container">
+            <div class="row">
+                <div class="col text-center ">
+                    <form class="ui form" action="resultado" method="get">
+                        <button type="submit" class="btn btn-success text-white">Resultados</button>
+                    </form>
+                </div>
+                <div class="col-12 mt-3">
+                    <ul class="list-group text-center">
+                        {% for item in resultados %}
+                            <li class="list-group-item">{{ item }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}
